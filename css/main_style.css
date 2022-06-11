@@ -39,7 +39,7 @@ ul {
 }
 
 .image {
-  width: 100%;
+  max-width: 100%;
 }
 
 .nav-bar {
@@ -145,7 +145,7 @@ ul {
 
 .header-container .image-box {
   position: relative;
-  margin: 0;
+  margin: 0 0 48px 0;
 }
 
 .rounded-rectangle {
@@ -157,4 +157,73 @@ ul {
   background-color: var(--soft-blue);
   border-radius: 240px 0 0 240px;
   z-index: -10;
+}
+
+.title {
+  color: var(--very-dark-blue);
+  font-weight: 500;
+}
+
+.paragraph {
+  margin-bottom: 36px;
+  color: var(--grayish-blue);
+}
+
+.btn-box {
+  display: flex;
+  /* justify-content: center; */
+  gap: 4%;
+}
+
+.btn {
+  padding: 16px 1%;
+  color: var(--very-dark-blue);
+  font-size: 0.8em;
+  font-weight: 500;
+  background-color: hsla(229, 8%, 60%, 0.1);
+  border-radius: 6px;
+}
+
+.btn.getchrome-btn {
+  width: 100%;
+  color: white;
+  background-color: var(--soft-blue);
+}
+
+.btn.getfirefox-btn {
+  width: 100%;
+  box-shadow: 0 4px 6px 0 hsla(229, 8%, 60%, 0.6);
+}
+
+.features-section {
+  padding: 0 5%;
+  text-align: center;
+}
+
+.features-section .paragraph {
+  margin-bottom: 36px;
+}
+
+.features-section .features-menu {
+  margin-bottom: 72px;
+  border-top: thin solid var(--grayish-blue);
+  border-bottom: thin solid var(--grayish-blue);
+}
+
+.features-menu .feature-option {
+  /* padding: 16px 0; */
+  padding-top: 16px;
+  width: 100%;
+  color: var(--grayish-blue);
+  background-color: transparent;
+  /* border-top: thin solid var(--grayish-blue);
+  border-bottom: thin solid var(--grayish-blue); */
+}
+
+.features-menu .line-btn {
+  margin: 16px auto 0 auto;
+  width: 40%;
+  height: 4px;
+  /* padding: 16px 0; */
+  background-color: var(--soft-red);
 }
