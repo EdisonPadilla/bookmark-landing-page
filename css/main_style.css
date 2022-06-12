@@ -40,6 +40,7 @@ ul {
 
 .image {
   max-width: 100%;
+  display: block;
 }
 
 .nav-bar {
@@ -206,12 +207,13 @@ ul {
 
 .features-section .features-menu {
   margin-bottom: 72px;
-  border-top: thin solid var(--grayish-blue);
-  border-bottom: thin solid var(--grayish-blue);
+  border: thin solid var(--grayish-blue);
+  border-left: none;
+  border-right: none;
 }
 
 .features-menu .feature-option {
-  /* padding: 16px 0; */
+  padding: 0;
   padding-top: 16px;
   width: 100%;
   color: var(--grayish-blue);
@@ -220,10 +222,97 @@ ul {
   border-bottom: thin solid var(--grayish-blue); */
 }
 
+.features-menu li:nth-child(even) {
+  border: thin solid var(--grayish-blue);
+  border-left: none;
+  border-right: none;
+}
+
 .features-menu .line-btn {
   margin: 16px auto 0 auto;
   width: 40%;
-  height: 4px;
+  /* height: 4px; */
   /* padding: 16px 0; */
-  background-color: var(--soft-red);
+  /* background-color: var(--soft-red); */
+  border-bottom: 4px solid var(--soft-red);
+}
+
+.features-section {
+  margin-bottom: 240px;
+}
+
+.features-section .articles-box {
+  position: relative;
+}
+
+.features-section .feature1-article {
+  opacity: 0;
+}
+
+.features-section .feature2-article {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+
+.features-section .feature3-article {
+  position: absolute;
+  top: 0;
+}
+
+.features-section .image-box {
+  position: relative;
+  margin: 0 0 80px 0;
+}
+
+.features-section .left-rounded-rectangle {
+  position: absolute;
+  top: 18%;
+  left: -6%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--soft-blue);
+  border-radius: 0 240px 240px 0;
+  z-index: -15;
+}
+
+.features-section .moreinfo-btn {
+  width: 100%;
+  color: white;
+  background-color: var(--soft-blue);
+}
+
+.download-section {
+  padding: 0 5% 120px 5%;
+  text-align: center;
+}
+
+.download-section .articles-box {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.download-section .browser-article {
+  padding: 48px 5% 24px 5%;
+  background: url(../images/bg-dots.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 8px;
+  background-position: center bottom 96px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px 0 hsla(229, 8%, 60%, 0.6);
+}
+
+.download-section > .paragraph {
+  margin-bottom: 40px;
+}
+
+.browser-article .paragraph {
+  margin-bottom: 62px;
+}
+
+.download-section .addext-btn {
+  width: 100%;
+  color: white;
+  background-color: var(--soft-blue);
 }
