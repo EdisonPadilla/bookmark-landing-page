@@ -12,6 +12,31 @@
   --very-dark-blue: hsl(229, 31%, 21%);
 }
 
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
 * {
   box-sizing: border-box;
 }
@@ -315,4 +340,93 @@ ul {
   width: 100%;
   color: white;
   background-color: var(--soft-blue);
+}
+
+.questions-section {
+  padding: 0 5% 120px 5%;
+  text-align: center;
+}
+
+.questions-section .list-questions {
+  margin-bottom: 40px;
+  text-align: left;
+  color: var(--very-dark-blue);
+}
+
+.list-questions button {
+  padding: 16px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  color: var(--very-dark-blue);
+  background-color: transparent;
+}
+
+.list-questions .question-box {
+  border-bottom: thin solid var(--grayish-blue);
+}
+
+.question-box .material-icons {
+  color: var(--soft-blue);
+}
+
+.questions-section .moreinfo-btn {
+  width: 28%;
+  color: white;
+  background-color: var(--soft-blue);
+}
+
+.email-section {
+  padding: 60px 5%;
+  text-align: center;
+  color: white;
+  background-color: var(--soft-blue);
+}
+
+.email-section .title {
+  color: white;
+}
+
+.form-box .email-input,
+.form-box .contact-btn {
+  width: 100%;
+}
+
+.form-box .email-input {
+  margin-bottom: 16px;
+  padding: 16px 5%;
+  color: var(--grayish-blue);
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+
+.form-box .contact-btn {
+  color: white;
+  background-color: var(--soft-red);
+}
+
+footer {
+  padding: 40px 0;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: var(--very-dark-blue);
+}
+
+footer .footer-menu {
+  line-height: 2;
+}
+
+footer .social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.social-container i {
+  font-size: 28px;
 }

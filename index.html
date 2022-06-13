@@ -11,6 +11,14 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Resetear los estilos para todos los navegadores -->
     <link rel="stylesheet" href="./css/normalize.css" />
     <!-- Mi hoja de estilos -->
@@ -20,6 +28,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
     <title>Frontend Mentor | Bookmark landing page</title>
@@ -196,23 +208,29 @@
           </article>
         </div>
       </section>
-      <section class="questions">
-        <h2>Frequently Asked Questions</h2>
-        <p>
+      <section class="questions-section">
+        <h2 class="title">Frequently Asked Questions</h2>
+        <p class="paragraph">
           Here are some of our FAQs. If you have any other questions you’d like
           answered please feel free to email us.
         </p>
         <ul class="list-questions">
-          <li>
-            <p>What is Bookmark?<span></span></p>
+          <li class="question-box">
+            <button>
+              What is Bookmark?
+              <span class="material-icons">expand_more</span>
+            </button>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
               tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
               quis quam ornare mattis.
             </p>
           </li>
-          <li>
-            <p>How can I request a new browser?<span></span></p>
+          <li class="question-box">
+            <button>
+              How can I request a new browser?
+              <span class="material-icons">expand_more</span>
+            </button>
             <p>
               Vivamus luctus eros aliquet convallis ultricies. Mauris augue
               massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus
@@ -222,8 +240,11 @@
               Suspendisse imperdiet.
             </p>
           </li>
-          <li>
-            <p>Is there a mobile app?<span></span></p>
+          <li class="question-box">
+            <button>
+              Is there a mobile app?
+              <span class="material-icons">expand_more</span>
+            </button>
             <p>
               Sed consectetur quam id neque fermentum accumsan. Praesent luctus
               vestibulum dolor, ut condimentum urna vulputate eget. Cras in
@@ -231,8 +252,11 @@
               sollicitudin ex et ultricies bibendum.
             </p>
           </li>
-          <li>
-            <p>What about other Chromium browsers?<span></span></p>
+          <li class="question-box">
+            <button>
+              What about other Chromium browsers?
+              <span class="material-icons">expand_more</span>
+            </button>
             <p>
               Integer condimentum ipsum id imperdiet finibus. Vivamus in
               placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida
@@ -240,27 +264,39 @@
             </p>
           </li>
         </ul>
-        <button type="submit" class="more-info">More Info</button>
+        <button type="submit" class="btn moreinfo-btn">More Info</button>
       </section>
-      <section class="contact-email">
+      <section class="email-section">
         <p>35,000+ already joined</p>
-        <h2>Stay up-to-date with what we’re doing</h2>
-        <form action="">
-          <input type="email" name="" id="" class="email-address" />
-          <button type="submit" class="contact">Contact Us</button>
+        <h2 class="title">Stay up-to-date with what we’re doing</h2>
+        <form action="" class="form-box">
+          <input
+            type="email"
+            name=""
+            id=""
+            class="email-input"
+            placeholder="Enter your email address"
+          />
+          <button type="submit" class="btn contact-btn">Contact Us</button>
         </form>
       </section>
     </main>
     <footer>
-      <img src="./images/logo-bookmark.svg" alt="" />
-      <ul>
+      <img src="./images/logo-bookmark-footer.svg" alt="" />
+      <ul class="footer-menu">
         <li><a href="" class="link">Features</a></li>
         <li><a href="" class="link">Pricing</a></li>
         <li><a href="" class="link">Contact</a></li>
       </ul>
       <ul class="social-container">
-        <li><a href="" class="link">Face</a></li>
-        <li><a href="" class="link">Twitter</a></li>
+        <li>
+          <a href="" class="link"
+            ><i class="fab fa-facebook-square f-icon"></i
+          ></a>
+        </li>
+        <li>
+          <a href="" class="link"><i class="fab fa-twitter t-icon"></i></a>
+        </li>
       </ul>
     </footer>
     <div>
