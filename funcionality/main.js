@@ -1,0 +1,98 @@
+"use strict";
+
+const d = document;
+
+const $ham_button = d.querySelector(".ham-btn");
+const $ham_icon = d.querySelector(".ham-icon");
+const $close_icon = d.querySelector(".close-icon");
+const $nav_bar = d.querySelector(".nav-bar");
+const $logo_white = d.querySelector(".nav-bar .logo-white");
+const $nav_menu = d.querySelector(".nav-bar .nav-menu");
+const $buttons_features = d.querySelectorAll(".features-menu .feature-option");
+// const $line_buttons_features = d.querySelectorAll(".features-menu .line-btn");
+const $features_articles = d.querySelectorAll(".features-section .f-article");
+const $questions_buttons = d.querySelectorAll(".list-questions .question-btn");
+const $arrow_icons = d.querySelectorAll(".list-questions .arrow-icon");
+const $email = d.querySelector(".email-section .email-input");
+const $contact_button = d.querySelector(".contact-btn");
+const $input_box = d.querySelector(".email-section .input-box");
+const $error_message = d.querySelector(".email-section .error-msg");
+const $error_icon = d.querySelector(".email-section .error-icon");
+
+console.log($ham_button);
+console.log($ham_icon);
+console.log($buttons_features);
+console.log($features_articles);
+console.log($questions_buttons);
+console.log($arrow_icons);
+console.log($email.value);
+console.log($contact_button);
+console.log($input_box);
+console.log($error_message);
+
+let currentValue = $email.value;
+
+$ham_button.addEventListener("click", () => {
+  $ham_icon.classList.toggle("clicked");
+  $close_icon.classList.toggle("clicked");
+  $nav_bar.classList.toggle("clicked");
+  $logo_white.classList.toggle("clicked");
+  $nav_menu.classList.toggle("show");
+});
+
+$buttons_features.forEach((button, index) => {
+  button.addEventListener("click", (e) => {
+    $features_articles[index].classList.remove("not-show");
+    $features_articles[index].classList.add("show");
+    $features_articles.forEach((art) => {
+      if (art !== $features_articles[index]) {
+        art.classList.remove("show");
+        art.classList.add("not-show");
+      }
+    });
+  });
+});
+
+$questions_buttons.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    $arrow_icons[index].classList.toggle("rotate");
+
+    let height = 0;
+    let marginBottom = 0;
+    let answer = button.nextElementSibling;
+    // console.log(answer.scrollHeight);
+    // console.log(answer.clientHeight);
+    if (answer.clientHeight === 0) {
+      height = answer.scrollHeight;
+      marginBottom = "16px";
+    }
+    // console.log(height);
+    answer.style.height = height + "px";
+    answer.style.marginBottom = marginBottom;
+    // answer.style.marginTop = "18px";
+    // console.log(answer.clientHeight);
+  });
+});
+
+let input = "";
+
+$contact_button.addEventListener("click", (e) => {
+  console.log("valor de email: ", $email.value);
+  console.log(validarEmail($email.value));
+  if (!validarEmail($email.value)) {
+    $input_box.classList.add("show");
+    $error_message.classList.add("show");
+    $error_icon.classList.add("show");
+  } else {
+    $input_box.classList.remove("show");
+    $error_message.classList.remove("show");
+    $error_icon.classList.remove("show");
+  }
+  e.preventDefault();
+});
+
+function validarEmail(email) {
+  let pattern =
+    /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  return pattern.test(email) ? true : false;
+}

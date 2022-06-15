@@ -50,7 +50,7 @@
   <body>
     <nav class="nav-bar">
       <img src="./images/logo-bookmark.svg" alt="" class="logo" />
-      <img src="./images/logo-bookmark-white.svg" alt="" class="logo white" />
+      <img src="./images/logo-bookmark-white.svg" alt="" class="logo-white" />
       <ul class="nav-menu">
         <li><a href="" class="menu-link">Features</a></li>
         <li><a href="" class="menu-link">Pricing</a></li>
@@ -105,26 +105,26 @@
         </p>
         <ul class="features-menu">
           <li>
-            <button class="feature-option">
+            <button class="feature-option bookmarking-btn">
               Simple Bookmarking
-              <div class="line-btn"></div>
+              <div class="line-btn line-btn1"></div>
             </button>
           </li>
           <li>
-            <button class="feature-option">
+            <button class="feature-option searching-btn">
               Speedy Searching
               <div class="line-btn"></div>
             </button>
           </li>
           <li>
-            <button class="feature-option">
+            <button class="feature-option sharing-btn">
               Easy Sharing
               <div class="line-btn"></div>
             </button>
           </li>
         </ul>
         <div class="articles-box">
-          <article class="feature1-article">
+          <article class="f-article feature1-article">
             <figure class="image-box">
               <div class="left-rounded-rectangle"></div>
               <img
@@ -141,7 +141,7 @@
             </p>
             <button class="btn moreinfo-btn">More Info</button>
           </article>
-          <article class="feature2-article">
+          <article class="f-article feature2-article">
             <figure class="image-box">
               <div class="left-rounded-rectangle"></div>
               <img
@@ -157,7 +157,7 @@
             </p>
             <button class="btn moreinfo-btn">More Info</button>
           </article>
-          <article class="feature3-article">
+          <article class="f-article feature3-article">
             <figure class="image-box">
               <div class="left-rounded-rectangle"></div>
               <img
@@ -216,9 +216,9 @@
         </p>
         <ul class="list-questions">
           <li class="question-box">
-            <button>
+            <button class="question-btn">
               What is Bookmark?
-              <span class="material-icons">expand_more</span>
+              <span class="material-icons arrow-icon">expand_more</span>
             </button>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
@@ -227,9 +227,9 @@
             </p>
           </li>
           <li class="question-box">
-            <button>
+            <button class="question-btn">
               How can I request a new browser?
-              <span class="material-icons">expand_more</span>
+              <span class="material-icons arrow-icon">expand_more</span>
             </button>
             <p>
               Vivamus luctus eros aliquet convallis ultricies. Mauris augue
@@ -241,9 +241,9 @@
             </p>
           </li>
           <li class="question-box">
-            <button>
+            <button class="question-btn">
               Is there a mobile app?
-              <span class="material-icons">expand_more</span>
+              <span class="material-icons arrow-icon">expand_more</span>
             </button>
             <p>
               Sed consectetur quam id neque fermentum accumsan. Praesent luctus
@@ -253,9 +253,9 @@
             </p>
           </li>
           <li class="question-box">
-            <button>
+            <button class="question-btn">
               What about other Chromium browsers?
-              <span class="material-icons">expand_more</span>
+              <span class="material-icons arrow-icon">expand_more</span>
             </button>
             <p>
               Integer condimentum ipsum id imperdiet finibus. Vivamus in
@@ -270,13 +270,19 @@
         <p>35,000+ already joined</p>
         <h2 class="title">Stay up-to-date with what we’re doing</h2>
         <form action="" class="form-box">
-          <input
-            type="email"
-            name=""
-            id=""
-            class="email-input"
-            placeholder="Enter your email address"
-          />
+          <div class="input-box">
+            <input
+              type="text"
+              name=""
+              id=""
+              value=""
+              class="email-input"
+              placeholder="Enter your email address"
+              required
+            />
+            <p class="error-msg">Whoops, make sure it's an email</p>
+            <img src="./images/icon-error.svg" alt="" class="error-icon" />
+          </div>
           <button type="submit" class="btn contact-btn">Contact Us</button>
         </form>
       </section>
@@ -307,5 +313,6 @@
         >. Coded by <a href="#">Your Name Here</a>.
       </p>
     </div>
+    <script src="./funcionality/main.js"></script>
   </body>
 </html>
