@@ -386,6 +386,7 @@ ul {
 }
 
 .download-section .browser-article {
+  height: 374px;
   padding: 48px 5% 24px 5%;
   background: url(../images/bg-dots.svg);
   background-repeat: no-repeat;
@@ -552,4 +553,239 @@ footer .social-container {
 
 .social-container i {
   font-size: 28px;
+}
+
+@media (min-width: 1024px) {
+  .nav-bar {
+    padding: 0 10%;
+    height: 24vh;
+  }
+
+  .nav-bar .nav-menu {
+    position: initial;
+    top: initial;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 4px;
+    color: var(--very-dark-blue);
+    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    z-index: initial;
+  }
+
+  .nav-menu li {
+    padding: 8px 24px;
+    border: none;
+  }
+
+  .nav-menu li:nth-child(4) {
+    background-color: var(--soft-red);
+    border-radius: 6px;
+  }
+
+  .nav-menu .menu-link {
+    font-size: 18px;
+  }
+
+  .nav-menu .login {
+    margin-top: 0;
+    padding: 0;
+    color: white;
+    font-weight: 500;
+    border: none;
+    /* background-color: var(--soft-red); */
+  }
+
+  .nav-menu .social-box {
+    display: none;
+  }
+
+  .ham-btn {
+    display: none;
+  }
+
+  .header-container {
+    padding-left: 8%;
+    padding-right: 8%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    text-align: left;
+  }
+
+  .header-container .text-content {
+    padding-right: 4%;
+    width: 50%;
+  }
+
+  .header-container .image-box {
+    width: 50%;
+    margin: 0;
+  }
+
+  .btn-box {
+    width: 64%;
+  }
+
+  .features-section {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  .features-section .paragraph.first {
+    margin: 0 auto;
+    width: 52%;
+    /* padding: 0 24%; */
+  }
+
+  .features-section .features-menu {
+    margin-left: auto;
+    margin-right: auto;
+    width: 56%;
+    display: flex;
+    border-top: none;
+  }
+
+  .features-menu li {
+    flex: auto;
+  }
+
+  .features-menu li:nth-child(even) {
+    border: none;
+  }
+
+  .line-btn {
+    width: 100%;
+  }
+
+  .features-section .f-article {
+    display: flex;
+    align-items: center;
+    /* gap: 4%; */
+  }
+
+  .features-section .image-box {
+    margin-bottom: 0;
+    width: 50%;
+  }
+
+  .features-section .image-box .image {
+    display: initial;
+  }
+
+  .f-article .content {
+    padding-left: 6%;
+    width: 50%;
+    text-align: left;
+  }
+
+  .features-section .left-rounded-rectangle {
+    left: -22%;
+    /* width: 112%; */
+  }
+
+  .features-section .moreinfo-btn {
+    width: 28%;
+    /* color: white; */
+    /* background-color: var(--soft-blue); */
+  }
+
+  .download-section {
+    padding: 0 8% 120px 8%;
+  }
+
+  .download-section .paragraph.first {
+    margin-left: auto;
+    margin-right: auto;
+    width: 52%;
+  }
+
+  .download-section .articles-box {
+    height: 458px;
+    padding: 8px 2%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .download-section .firefox {
+    align-self: center;
+  }
+
+  .download-section .opera {
+    align-self: flex-end;
+  }
+
+  .questions-section {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  .questions-section .paragraph.first {
+    margin: 0 auto;
+    width: 52%;
+  }
+
+  .questions-section .list-questions {
+    margin-left: auto;
+    margin-right: auto;
+    width: 56%;
+  }
+
+  .questions-section .moreinfo-btn {
+    width: 14%;
+  }
+
+  .email-section {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  .email-section .title {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+
+  .email-section .form-box {
+    margin-left: auto;
+    margin-right: auto;
+    width: 52%;
+    display: flex;
+    align-items: center;
+    gap: 2%;
+  }
+
+  .form-box .input-box {
+    margin-bottom: 0;
+    width: 68%;
+    /* flex: 1; */
+  }
+
+  .form-box .contact-btn {
+    width: 32%;
+    font-size: 18px;
+  }
+
+  footer {
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+  }
+
+  footer .footer-menu {
+    margin-left: 6%;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex: 1;
+    line-height: initial;
+  }
 }

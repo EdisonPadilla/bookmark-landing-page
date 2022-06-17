@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
+    <!-- displays site properly based on user's device 
+    Para que el estilo de la página se vea similar en dispositivos móviles que en una computadora de escritorio o portátil
+    -->
 
     <link
       rel="icon"
@@ -85,20 +87,22 @@
           class="image header-img"
         />
       </figure>
-      <h1 class="title">A Simple Bookmark Manager</h1>
-      <p class="paragraph">
-        A clean and simple interface to organize your favourite websites. Open a
-        new browser tab and see your sites load instantly. Try it for free.
-      </p>
-      <div class="btn-box">
-        <button class="btn getchrome-btn">Get it on Chrome</button>
-        <button class="btn getfirefox-btn">Get it on Firefox</button>
+      <div class="text-content">
+        <h1 class="title">A Simple Bookmark Manager</h1>
+        <p class="paragraph">
+          A clean and simple interface to organize your favourite websites. Open
+          a new browser tab and see your sites load instantly. Try it for free.
+        </p>
+        <div class="btn-box">
+          <button class="btn getchrome-btn">Get it on Chrome</button>
+          <button class="btn getfirefox-btn">Get it on Firefox</button>
+        </div>
       </div>
     </header>
     <main>
       <section class="features-section">
         <h2 class="title">Features</h2>
-        <p class="paragraph">
+        <p class="paragraph first">
           Our aim is to make it quick and easy for you to access your favourite
           websites. Your bookmarks sync between your devices so you can access
           them on the go.
@@ -133,13 +137,15 @@
                 class="image"
               />
             </figure>
-            <h2 class="title">Bookmark in one click</h2>
-            <p class="paragraph">
-              Organize your bookmarks however you like. Our simple drag-and-drop
-              interface gives you complete control over how you manage your
-              favourite sites.
-            </p>
-            <button class="btn moreinfo-btn">More Info</button>
+            <div class="content">
+              <h2 class="title">Bookmark in one click</h2>
+              <p class="paragraph">
+                Organize your bookmarks however you like. Our simple
+                drag-and-drop interface gives you complete control over how you
+                manage your favourite sites.
+              </p>
+              <button class="btn moreinfo-btn">More Info</button>
+            </div>
           </article>
           <article class="f-article feature2-article">
             <figure class="image-box">
@@ -150,12 +156,14 @@
                 class="image"
               />
             </figure>
-            <h2 class="title">Intelligent search</h2>
-            <p class="paragraph">
-              Our powerful search feature will help you find saved sites in no
-              time at all. No need to trawl through all of your bookmarks.
-            </p>
-            <button class="btn moreinfo-btn">More Info</button>
+            <div class="content">
+              <h2 class="title">Intelligent search</h2>
+              <p class="paragraph">
+                Our powerful search feature will help you find saved sites in no
+                time at all. No need to trawl through all of your bookmarks.
+              </p>
+              <button class="btn moreinfo-btn">More Info</button>
+            </div>
           </article>
           <article class="f-article feature3-article">
             <figure class="image-box">
@@ -166,23 +174,25 @@
                 class="image"
               />
             </figure>
-            <h2 class="title">Share your bookmarks</h2>
-            <p class="paragraph">
-              Easily share your bookmarks and collections with others. Create a
-              shareable link that you can send at the click of a button.
-            </p>
-            <button class="btn moreinfo-btn">More Info</button>
+            <div class="content">
+              <h2 class="title">Share your bookmarks</h2>
+              <p class="paragraph">
+                Easily share your bookmarks and collections with others. Create
+                a shareable link that you can send at the click of a button.
+              </p>
+              <button class="btn moreinfo-btn">More Info</button>
+            </div>
           </article>
         </div>
       </section>
       <section class="download-section">
         <h2 class="title">Download the extension</h2>
-        <p class="paragraph">
+        <p class="paragraph first">
           We’ve got more browsers in the pipeline. Please do let us know if
           you’ve got a favourite you’d like us to prioritize.
         </p>
         <div class="articles-box">
-          <article class="browser-article">
+          <article class="browser-article chrome">
             <img src="./images/logo-chrome.svg" alt="" />
             <h3 class="title">Add to Chrome</h3>
             <p class="paragraph">Minimum version 62</p>
@@ -190,7 +200,7 @@
               Add & Install Extension
             </button>
           </article>
-          <article class="browser-article">
+          <article class="browser-article firefox">
             <img src="./images/logo-firefox.svg" alt="" />
             <h3 class="title">Add to Firefox</h3>
             <p class="paragraph">Minimum version 55</p>
@@ -198,7 +208,7 @@
               Add & Install Extension
             </button>
           </article>
-          <article class="browser-article">
+          <article class="browser-article opera">
             <img src="./images/logo-opera.svg" alt="" />
             <h3 class="title">Add to Opera</h3>
             <p class="paragraph">Minimum version 46</p>
@@ -210,7 +220,7 @@
       </section>
       <section class="questions-section">
         <h2 class="title">Frequently Asked Questions</h2>
-        <p class="paragraph">
+        <p class="paragraph first">
           Here are some of our FAQs. If you have any other questions you’d like
           answered please feel free to email us.
         </p>
@@ -275,7 +285,8 @@
               type="text"
               name=""
               id=""
-              value=""na
+              value=""
+              na
               class="email-input"
               placeholder="Enter your email address"
               required
