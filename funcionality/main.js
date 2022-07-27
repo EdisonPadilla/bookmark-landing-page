@@ -9,7 +9,7 @@ const $nav_bar = d.querySelector(".nav-bar");
 const $logo_white = d.querySelector(".nav-bar .logo-white");
 const $nav_menu = d.querySelector(".nav-bar .nav-menu");
 const $buttons_features = d.querySelectorAll(".features-menu .feature-option");
-// const $line_buttons_features = d.querySelectorAll(".features-menu .line-btn");
+const $line_buttons_features = d.querySelectorAll(".features-menu .line-btn");
 const $features_articles = d.querySelectorAll(".features-section .f-article");
 const $questions_buttons = d.querySelectorAll(".list-questions .question-btn");
 const $arrow_icons = d.querySelectorAll(".list-questions .arrow-icon");
@@ -19,18 +19,11 @@ const $input_box = d.querySelector(".email-section .input-box");
 const $error_message = d.querySelector(".email-section .error-msg");
 const $error_icon = d.querySelector(".email-section .error-icon");
 
-console.log($ham_button);
-console.log($ham_icon);
-console.log($buttons_features);
-console.log($features_articles);
-console.log($questions_buttons);
-console.log($arrow_icons);
-console.log($email.value);
-console.log($contact_button);
-console.log($input_box);
-console.log($error_message);
-
-let currentValue = $email.value;
+function validarEmail(email) {
+  let pattern =
+    /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  return pattern.test(email) ? true : false;
+}
 
 $ham_button.addEventListener("click", () => {
   $ham_icon.classList.toggle("clicked");
@@ -42,14 +35,16 @@ $ham_button.addEventListener("click", () => {
 
 $buttons_features.forEach((button, index) => {
   button.addEventListener("click", (e) => {
-    $features_articles[index].classList.remove("not-show");
-    $features_articles[index].classList.add("show");
-    $features_articles.forEach((art) => {
-      if (art !== $features_articles[index]) {
-        art.classList.remove("show");
-        art.classList.add("not-show");
-      }
+    Array.from($buttons_features).map((btn) => btn.classList.remove("clicked"));
+    Array.from($line_buttons_features).map((line) =>
+      line.classList.remove("clicked")
+    );
+    button.classList.add("clicked");
+    $line_buttons_features[index].classList.add("clicked");
+    Array.from($features_articles).map((article) => {
+      article.classList.remove("show");
     });
+    $features_articles[index].classList.add("show");
   });
 });
 
@@ -60,21 +55,15 @@ $questions_buttons.forEach((button, index) => {
     let height = 0;
     let marginBottom = 0;
     let answer = button.nextElementSibling;
-    // console.log(answer.scrollHeight);
-    // console.log(answer.clientHeight);
+
     if (answer.clientHeight === 0) {
       height = answer.scrollHeight;
       marginBottom = "16px";
     }
-    // console.log(height);
     answer.style.height = height + "px";
     answer.style.marginBottom = marginBottom;
-    // answer.style.marginTop = "18px";
-    // console.log(answer.clientHeight);
   });
 });
-
-let input = "";
 
 $contact_button.addEventListener("click", (e) => {
   console.log("valor de email: ", $email.value);
@@ -91,8 +80,6 @@ $contact_button.addEventListener("click", (e) => {
   e.preventDefault();
 });
 
-function validarEmail(email) {
-  let pattern =
-    /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-  return pattern.test(email) ? true : false;
-}
+$buttons_features[0].classList.add("clicked");
+$line_buttons_features[0].classList.add("clicked");
+$features_articles[0].classList.add("show");

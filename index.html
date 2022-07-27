@@ -37,27 +37,20 @@
       rel="stylesheet"
     />
     <title>Frontend Mentor | Bookmark landing page</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <nav class="nav-bar">
-      <img src="./images/logo-bookmark.svg" alt="" class="logo" />
-      <img src="./images/logo-bookmark-white.svg" alt="" class="logo-white" />
+      <img src="./images/logo-bookmark.svg" alt="Bookmark" class="logo" />
+      <img
+        src="./images/logo-bookmark-white.svg"
+        alt="Bookmark"
+        class="logo-white"
+      />
       <ul class="nav-menu">
         <li><a href="" class="menu-link">Features</a></li>
         <li><a href="" class="menu-link">Pricing</a></li>
         <li><a href="" class="menu-link">Contact</a></li>
-        <li><a href="" class="menu-link login">Login</a></li>
+        <li class="login-box"><a href="" class="menu-link login">Login</a></li>
         <li class="social-box">
           <a class="face-link" href=""
             ><img
@@ -94,7 +87,7 @@
           a new browser tab and see your sites load instantly. Try it for free.
         </p>
         <div class="btn-box">
-          <button class="btn getchrome-btn">Get it on Chrome</button>
+          <button class="btn type1">Get it on Chrome</button>
           <button class="btn getfirefox-btn">Get it on Firefox</button>
         </div>
       </div>
@@ -109,19 +102,19 @@
         </p>
         <ul class="features-menu">
           <li>
-            <button class="feature-option bookmarking-btn">
+            <button class="feature-option">
               Simple Bookmarking
-              <div class="line-btn line-btn1"></div>
+              <div class="line-btn"></div>
             </button>
           </li>
           <li>
-            <button class="feature-option searching-btn">
+            <button class="feature-option">
               Speedy Searching
               <div class="line-btn"></div>
             </button>
           </li>
           <li>
-            <button class="feature-option sharing-btn">
+            <button class="feature-option">
               Easy Sharing
               <div class="line-btn"></div>
             </button>
@@ -144,7 +137,7 @@
                 drag-and-drop interface gives you complete control over how you
                 manage your favourite sites.
               </p>
-              <button class="btn moreinfo-btn">More Info</button>
+              <button class="btn type1">More Info</button>
             </div>
           </article>
           <article class="f-article feature2-article">
@@ -162,7 +155,8 @@
                 Our powerful search feature will help you find saved sites in no
                 time at all. No need to trawl through all of your bookmarks.
               </p>
-              <button class="btn moreinfo-btn">More Info</button>
+              <!-- <button class="btn moreinfo-btn">More Info</button> -->
+              <button class="btn type1">More Info</button>
             </div>
           </article>
           <article class="f-article feature3-article">
@@ -180,7 +174,8 @@
                 Easily share your bookmarks and collections with others. Create
                 a shareable link that you can send at the click of a button.
               </p>
-              <button class="btn moreinfo-btn">More Info</button>
+              <!-- <button class="btn moreinfo-btn">More Info</button> -->
+              <button class="btn type1">More Info</button>
             </div>
           </article>
         </div>
@@ -196,7 +191,7 @@
             <img src="./images/logo-chrome.svg" alt="" />
             <h3 class="title">Add to Chrome</h3>
             <p class="paragraph">Minimum version 62</p>
-            <button type="submit" class="btn addext-btn">
+            <button type="submit" class="btn type1">
               Add & Install Extension
             </button>
           </article>
@@ -204,7 +199,7 @@
             <img src="./images/logo-firefox.svg" alt="" />
             <h3 class="title">Add to Firefox</h3>
             <p class="paragraph">Minimum version 55</p>
-            <button type="submit" class="btn addext-btn">
+            <button type="submit" class="btn type1">
               Add & Install Extension
             </button>
           </article>
@@ -212,7 +207,7 @@
             <img src="./images/logo-opera.svg" alt="" />
             <h3 class="title">Add to Opera</h3>
             <p class="paragraph">Minimum version 46</p>
-            <button type="submit" class="btn addext-btn">
+            <button type="submit" class="btn type1">
               Add & Install Extension
             </button>
           </article>
@@ -274,19 +269,18 @@
             </p>
           </li>
         </ul>
-        <button type="submit" class="btn moreinfo-btn">More Info</button>
+        <button type="submit" class="btn type1">More Info</button>
       </section>
       <section class="email-section">
         <p>35,000+ already joined</p>
         <h2 class="title">Stay up-to-date with what we’re doing</h2>
-        <form action="" class="form-box">
+        <form action="#" class="form-box">
           <div class="input-box">
             <input
               type="text"
               name=""
               id=""
               value=""
-              na
               class="email-input"
               placeholder="Enter your email address"
               required
@@ -316,12 +310,30 @@
         </li>
       </ul>
     </footer>
-    <div>
-      <p class="attribution">
+    <div class="attribution">
+      <p class="a-box">
         Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          class="a-link"
+        >
+          <span class="a-link-text" text-value="Frontend Mentors"
+            >Frontend Mentors</span
+          ></a
+        >.
+      </p>
+      <p>
+        Coded by
+        <a
+          href="https://github.com/EdisonPadilla"
+          target="_blank"
+          class="a-link"
+        >
+          <span class="a-link-text" text-value="Edison Padilla"
+            >Edison Padilla</span
+          ></a
+        >.
       </p>
     </div>
     <script src="./funcionality/main.js"></script>
